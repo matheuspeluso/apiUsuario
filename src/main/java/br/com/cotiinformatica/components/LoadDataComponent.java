@@ -83,7 +83,7 @@ public class LoadDataComponent implements ApplicationRunner {
 		usuarioAdministrador.setId(UUID.fromString("f5b8e780-30c1-4b6e-a8f4-96d76ede67c4"));
 		usuarioAdministrador.setNome("Matheus Peluso");
 		usuarioAdministrador.setEmail("matheuspeluso17@gmail.com");
-		usuarioAdministrador.setSenha(sha256Component.hash("coti"));
+		usuarioAdministrador.setSenha(sha256Component.hash("Matheus1234@"));
 		usuarioAdministrador.setPerfil(perfilAdministrador);
 		
 		usuarioRepository.save(usuarioAdministrador);
