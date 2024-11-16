@@ -1,0 +1,15 @@
+services:
+    
+    postgres: ## Criando um serviço do POSTGRESQL
+       image: postgres:latest  #imagem que será instalada no DOCKER
+       environment: #Configuração do ambiente do POSTGRESQL
+          POSTGRES_USER: postgres #Usuario administrado do banco de dados
+          POSTGRES_PASSWORD: coti #senha do banco de dados
+          POSTGRES_DB: bd_apiusuarios #Nome do banco de dados
+       ports:
+          - "5432:5432" #[porta para acesso externo] : [posta interna do container]
+  
+networks: # configurando um serviço de rede
+    default: # definindo o padrão de rede
+      driver: bridge # tipo de rede: Compartilhada
+  
